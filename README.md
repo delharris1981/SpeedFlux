@@ -91,16 +91,10 @@ If you already have Docker and Docker Compose installed, you can use the include
 1. Run the container.
     ```
      docker run -d -t --name speedflux \
-    -e 'NAMESPACE'='None' \
-    -e 'INFLUX_DB_ADDRESS'='influxdb' \
-    -e 'INFLUX_DB_PORT'='8086' \
-    -e 'INFLUX_DB_USER'='_influx_user_' \
-    -e 'INFLUX_DB_PASSWORD'='_influx_pass_' \
-    -e 'INFLUX_DB_DATABASE'='speedtests' \
     -e 'SPEEDTEST_INTERVAL'='5' \
-    -e 'SPEEDTEST_FAIL_INTERVAL'='5'  \
-    -e 'SPEEDTEST_SERVER_ID'='12746' \
+    -e 'SPEEDTEST_FAIL_INTERVAL'='30'  \
     -e 'LOG_TYPE'='info' \
+    -e 'PING_INTERVAL'='1800'
     breadlysm/speedtest-to-influxdb
     ```
 - You can also use `ghcr.io/breadlysm/speedflux` as GitHub containers is enabled. 
